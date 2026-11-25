@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Garden {
     private ArrayList<Flower> flowers;
-
+    //new Garden() creates empty array list
     public Garden() {
         flowers = new ArrayList<>();
 
@@ -20,6 +20,7 @@ public class Garden {
         if (day == null || day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY) {
             return null;
         }
+        //obtains numerical value of the weekday (Monday=1,etc)
         int index = day.getValue() - 1;
         if (index < flowers.size()) {
             return flowers.get(index);
