@@ -9,11 +9,13 @@ public class Garden {
 
 
     }
+    // adding flowers to the garden
     public void addFlower(Flower flower) {
         if (flowers.size() < 5) {
             flowers.add(flower);
         }
     }
+    // finding the flower that is assigned to a weekday
     public Flower getFlowerForDay(DayOfWeek day) {
         if (day == null || day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY) {
             return null;
@@ -24,6 +26,7 @@ public class Garden {
         }
         return null;
     }
+    // returns all flowers in the garden
     public ArrayList<Flower> getFlowers() {
         return flowers;
     }
