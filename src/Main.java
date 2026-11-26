@@ -1,8 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.DayOfWeek;
 void main() {
-    //TESTING ONLY!!  
-    Flower flower = new Flower("Daisy", "closed",
+    // EVERYTHING CURRENTLY UNDER THIS IS TESTING ONLY!!
+    Flower tulip = new Flower("Tulip", "closed",
             "partially open", "fully open");
-    System.out.println(flower.getName());
+
+    Flower daisy = new Flower("Daisy", "closed",
+            "partially open", "fully open");
+
+    Flower hibiscus = new Flower("Hibiscus", "closed",
+            "partially open", "fully open");
+
+    Garden garden = new Garden();
+    garden.addFlower(tulip);
+    garden.addFlower(daisy);
+    garden.addFlower(hibiscus);
+
+    System.out.println(garden.getFlowerForDay(DayOfWeek.MONDAY).getName());
+    System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
+
+    GardenGUI gui = new GardenGUI(garden); //passing existing argument to constructor in GardenGUI
 }
