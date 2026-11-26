@@ -11,7 +11,7 @@ public class Garden {
     }
     // adding flowers to the garden
     public void addFlower(Flower flower) {
-        if (flowers.size() < 5) {
+        if (flower != null && flowers.size() < 5) {
             flowers.add(flower);
         }
     }
@@ -28,6 +28,6 @@ public class Garden {
     }
     // returns all flowers in the garden
     public ArrayList<Flower> getFlowers() {
-        return flowers;
+        return new ArrayList<>(flowers);
     }
 }
