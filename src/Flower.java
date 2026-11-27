@@ -1,4 +1,5 @@
-import org.w3c.dom.ls.LSOutput;
+import java.time.LocalTime;
+
 //private instance variables
 public class Flower {
     private String name;
@@ -82,6 +83,22 @@ public class Flower {
 
         }
 
+    }
+    public void updateStage() {
+        LocalTime currentTime =
+                RaleighTimeZone.getRaleighTime().toLocalTime();
+
+        LocalTime closedTime = LocalTime.of(5, 30);
+        LocalTime partiallyOpenTime = LocalTime.of(9, 30);
+        LocalTime fullyOpenTime = LocalTime.of(12, 30);
+
+        if (currentTime.isBefore(partiallyOpenTime)){
+            currentStage = FlowerStage.CLOSED;
+        }else if (currentTime.isBefore(fullyOpenTime)){
+            currentStage = FlowerStage.PARTIALLY_OPEN;
+        }else {
+            currentStage = FlowerStage.FULLY_OPEN;
+        }
     }
 
 }
