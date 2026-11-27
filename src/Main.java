@@ -23,9 +23,9 @@ void main() {
 
     System.out.println(garden.getFlowerForDay(DayOfWeek.MONDAY).getName());
     System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
-    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
-    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
-    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.WEDNSDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.THURSDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.FRIDAY).getName());
 
     GardenGUI gui = new GardenGUI(garden); //passing existing argument to constructor in GardenGUI
 }
