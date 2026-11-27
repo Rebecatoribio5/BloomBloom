@@ -21,7 +21,7 @@ public class Garden {
             return null;
         }
         //obtains numerical value of the weekday (Monday=1,etc)
-        int index = day.getValue() - 1;
+        int index = 0;
         if (index < flowers.size()) {
             return flowers.get(index);
         }

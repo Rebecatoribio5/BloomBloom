@@ -1,19 +1,23 @@
 import java.time.DayOfWeek;
+
+
+
 void main() {
     // EVERYTHING CURRENTLY UNDER THIS IS TESTING ONLY!!
-    Flower tulip = new Flower("Tulip", "closed",
-            "partially open", "fully open");
+    //"images/..." gives the location of the image as a text
+    Flower tulip = new Flower("Tulip", "images/tulip_closed.png",
+            "images/tulip_partial.png", "images/tulip_open.png");
 
-    Flower daisy = new Flower("Daisy", "closed",
-            "partially open", "fully open");
+    Flower daisy = new Flower("Daisy", "images/daisy_closed.png",
+            "images/daisy_partial.png", "images/daisy_open.png");
 
-    Flower hibiscus = new Flower("Hibiscus", "closed",
-            "partially open", "fully open");
+   // Flower hibiscus = new Flower("Hibiscus", "closed",
+         //   "partially open", "fully open");
 
     Garden garden = new Garden();
     garden.addFlower(tulip);
     garden.addFlower(daisy);
-    garden.addFlower(hibiscus);
+    //garden.addFlower(hibiscus);
     // garden.addFlower();
     // garden.addFlower();
 
