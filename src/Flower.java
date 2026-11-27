@@ -1,4 +1,5 @@
 import org.w3c.dom.ls.LSOutput;
+import java.time.LocalTime; //extracts just time portion from RaleighTimeZone
 //private instance variables
 public class Flower {
     private String name;
@@ -77,6 +78,25 @@ public class Flower {
 
             default:
                 return closedImage;
+
+
+
+    //changes flower currentStage based on current Raleigh time.
+
+    public void updateFlowerStage(LocalTime sunrise, Localtime sunset)   {
+        LocalTime currentTime = RaleighTimeZone.getRaleighTime().toLocalTime();
+
+        //is current time before sunrise or at/after sunset?
+        if (currentTime.isBefore(sunrise) || !currentTime.isBefore(sunset)) {
+            currentStage = FlowerStage.CLOSED;
+
+        } else {
+            currentStage = FlowerStage.FULLY_OPEN;
+        }
+
+
+
+            }
 
 
 
