@@ -14,9 +14,14 @@ void main() {
     garden.addFlower(tulip);
     garden.addFlower(daisy);
     garden.addFlower(hibiscus);
+    // garden.addFlower();
+    // garden.addFlower();
 
     System.out.println(garden.getFlowerForDay(DayOfWeek.MONDAY).getName());
     System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
+    // System.out.println(garden.getFlowerForDay(DayOfWeek.TUESDAY).getName());
 
     GardenGUI gui = new GardenGUI(garden); //passing existing argument to constructor in GardenGUI
 }
